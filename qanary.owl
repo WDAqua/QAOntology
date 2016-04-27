@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 
 
-<!DOCTYPE Ontology [
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY qa "https://w3id.org/wdaqua/qanary#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -9,315 +12,357 @@
 ]>
 
 
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://w3id.org/wdaqua/qanary#"
+<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
+     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:qa="https://w3id.org/wdaqua/qanary#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/wdaqua/qanary#">
-    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
-    <Prefix name="qa" IRI="https://w3id.org/wdaqua/qanary#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Import>http://www.openannotation.org/spec/core/20130208/oa.owl</Import>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:creator"/>
-        <IRI>http://wdaqua.informatik.uni-bonn.de</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:title"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Qanary</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:created"/>
-        <Literal datatypeIRI="&xsd;date">01-10-2015</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:license"/>
-        <IRI>http://creativecommons.org/licenses/by-nc-sa/2.0/</IRI>
-    </Annotation>
-    <Declaration>
-        <Class IRI="AnnoOfEndpointOfDataset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnoOfPosTag"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationAnswer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationDataset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfAnswerFormat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfAnswerType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfInstance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfSpotClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfSpotEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfSpotInstance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationOfSpotRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnnotationQuestion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Answer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnswerFormat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnswerType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Class"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Dataset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Endpoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Entity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HelperDataset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Instance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PosTag"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Question"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Relation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TargetDataset"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="score"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="AnnoOfEndpointOfDataset"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="Endpoint"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnoOfPosTag"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="PosTag"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationAnswer"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <Class IRI="Answer"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationDataset"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <Class IRI="Dataset"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfAnswerFormat"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="AnswerFormat"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfAnswerType"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="AnswerType"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfClass"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="Class"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfEntity"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="Entity"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfInstance"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="Instance"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationOfRelation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasBody"/>
-            <Class IRI="Relation"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="AnnotationQuestion"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <Class IRI="Answer"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="AnnoOfEndpointOfDataset"/>
-        <Class IRI="AnnotationDataset"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnoOfPosTag"/>
-        <Class IRI="AnnotationQuestion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationAnswer"/>
-        <Class IRI="http://www.w3.org/ns/oa#Annotation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationDataset"/>
-        <Class IRI="http://www.w3.org/ns/oa#Annotation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfAnswerFormat"/>
-        <Class IRI="AnnotationAnswer"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfAnswerType"/>
-        <Class IRI="AnnotationAnswer"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfClass"/>
-        <Class IRI="AnnotationOfEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfEntity"/>
-        <Class IRI="AnnotationQuestion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfInstance"/>
-        <Class IRI="AnnotationOfEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfRelation"/>
-        <Class IRI="AnnotationOfEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfSpotClass"/>
-        <Class IRI="AnnotationOfSpotEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfSpotEntity"/>
-        <Class IRI="AnnotationQuestion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfSpotInstance"/>
-        <Class IRI="AnnotationOfSpotEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationOfSpotRelation"/>
-        <Class IRI="AnnotationOfSpotEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnnotationQuestion"/>
-        <Class IRI="http://www.w3.org/ns/oa#Annotation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Class"/>
-        <Class IRI="Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HelperDataset"/>
-        <Class IRI="Dataset"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Instance"/>
-        <Class IRI="Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Relation"/>
-        <Class IRI="Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TargetDataset"/>
-        <Class IRI="Dataset"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI=":Ontology"/>
-        <NamedIndividual IRI=""/>
-    </ClassAssertion>
-    <DataPropertyDomain>
-        <DataProperty IRI="score"/>
-        <Class IRI="http://www.w3.org/ns/oa#Annotation"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="score"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI></IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology to annotate a question with typical informations generated during a QA process</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI></IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Qanary ontology</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI></IRI>
-        <Literal datatypeIRI="&xsd;decimal">1.0</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>score</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Describes the confidence/trust we have in the Annotation.</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/wdaqua/qanary#">
+        <terms:created rdf:datatype="&xsd;date">01-10-2015</terms:created>
+        <terms:title xml:lang="en">Qanary</terms:title>
+        <terms:creator rdf:resource="http://wdaqua.informatik.uni-bonn.de"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"/>
+        <owl:imports rdf:resource="http://www.openannotation.org/spec/core/20130208/oa.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#score -->
+
+    <owl:DatatypeProperty rdf:about="&qa;score">
+        <rdfs:comment xml:lang="en">Describes the confidence/trust we have in the Annotation.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/owl/owlapi/turtle#Ontology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Ontology"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnoOfEndpointOfDataset -->
+
+    <owl:Class rdf:about="&qa;AnnoOfEndpointOfDataset">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;Endpoint"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnoOfPosTag -->
+
+    <owl:Class rdf:about="&qa;AnnoOfPosTag">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;PosTag"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationAnswer -->
+
+    <owl:Class rdf:about="&qa;AnnotationAnswer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+                <owl:someValuesFrom rdf:resource="&qa;Answer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationDataset -->
+
+    <owl:Class rdf:about="&qa;AnnotationDataset">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+                <owl:someValuesFrom rdf:resource="&qa;Dataset"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfAnswerFormat -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfAnswerFormat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;AnswerFormat"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationAnswer"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfAnswerType -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfAnswerType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;AnswerType"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationAnswer"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfClass -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfClass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;Class"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfEntity -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfEntity">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;Entity"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfInstance -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfInstance">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;Instance"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfRelation -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfRelation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+                <owl:someValuesFrom rdf:resource="&qa;Relation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfSpotClass -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfSpotClass">
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfSpotEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfSpotEntity -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfSpotEntity">
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfSpotInstance -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfSpotInstance">
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfSpotEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationOfSpotRelation -->
+
+    <owl:Class rdf:about="&qa;AnnotationOfSpotRelation">
+        <rdfs:subClassOf rdf:resource="&qa;AnnotationOfSpotEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnnotationQuestion -->
+
+    <owl:Class rdf:about="&qa;AnnotationQuestion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+                <owl:someValuesFrom rdf:resource="&qa;Answer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Answer -->
+
+    <owl:Class rdf:about="&qa;Answer"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnswerFormat -->
+
+    <owl:Class rdf:about="&qa;AnswerFormat"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#AnswerType -->
+
+    <owl:Class rdf:about="&qa;AnswerType"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Class -->
+
+    <owl:Class rdf:about="&qa;Class">
+        <rdfs:subClassOf rdf:resource="&qa;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Dataset -->
+
+    <owl:Class rdf:about="&qa;Dataset"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Endpoint -->
+
+    <owl:Class rdf:about="&qa;Endpoint"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Entity -->
+
+    <owl:Class rdf:about="&qa;Entity"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#HelperDataset -->
+
+    <owl:Class rdf:about="&qa;HelperDataset">
+        <rdfs:subClassOf rdf:resource="&qa;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Instance -->
+
+    <owl:Class rdf:about="&qa;Instance">
+        <rdfs:subClassOf rdf:resource="&qa;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#PosTag -->
+
+    <owl:Class rdf:about="&qa;PosTag"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Question -->
+
+    <owl:Class rdf:about="&qa;Question"/>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#Relation -->
+
+    <owl:Class rdf:about="&qa;Relation">
+        <rdfs:subClassOf rdf:resource="&qa;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary#TargetDataset -->
+
+    <owl:Class rdf:about="&qa;TargetDataset">
+        <rdfs:subClassOf rdf:resource="&qa;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/wdaqua/qanary# -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/wdaqua/qanary#">
+        <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Ontology"/>
+        <rdfs:label xml:lang="en">Qanary ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology to annotate a question with typical informations generated during a QA process</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
