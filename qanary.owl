@@ -25,7 +25,7 @@
         <terms:created rdf:datatype="&xsd;date">01-10-2015</terms:created>
         <terms:title xml:lang="en">Qanary</terms:title>
         <terms:creator rdf:resource="http://wdaqua.informatik.uni-bonn.de"/>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <owl:imports rdf:resource="http://www.openannotation.org/spec/core/20130208/oa.owl"/>
     </owl:Ontology>
     
