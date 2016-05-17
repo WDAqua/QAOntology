@@ -16,7 +16,7 @@
 				terms:created "01-10-2015"^^xsd:date ;
 				terms:creator <http://wdaqua.informatik.uni-bonn.de> ;
 				owl:versionInfo 1.0 ;
-				terms:license <http://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+				terms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
  			 	owl:imports <http://www.openannotation.org/spec/core/20130208/oa.owl> .
 
 # Introducing classes for question, answer and dataset
