@@ -36,7 +36,7 @@ qa:score  rdf:type owl:DatatypeProperty ;
 qa:AnnotationQuestion  rdf:type owl:Class ;
 			owl:equivalentClass [ rdf:type owl:Restriction ;
                                         owl:onProperty <http://www.w3.org/ns/oa#hasTarget> ;
-                                        owl:someValuesFrom qa:Answer
+                                        owl:someValuesFrom qa:Question
                                       ] ;
                     	rdfs:subClassOf <http://www.w3.org/ns/oa#Annotation> .
 
