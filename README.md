@@ -1,6 +1,6 @@
 # QAOntology
 
-This repository contains the Qanary (**Q**uestion **an**swering vocabul**ary** vocabulary). The permanent URI of the ontology is:
+This repository contains the Qanary (**Q**uestion **an**swering vocabul**ary**) vocabulary. The permanent URI of the ontology is:
 
 <https://w3id.org/wdaqua/qanary#>
 
