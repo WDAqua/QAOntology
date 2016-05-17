@@ -247,7 +247,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
-                <owl:someValuesFrom rdf:resource="&qa;Answer"/>
+                <owl:someValuesFrom rdf:resource="&qa;Question"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
