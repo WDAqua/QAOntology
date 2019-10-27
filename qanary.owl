@@ -22,9 +22,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/wdaqua/qanary#">
-        <terms:created rdf:datatype="&xsd;date">01-10-2015</terms:created>
+        <terms:created rdf:datatype="&xsd;date">2015-10-01</terms:created>
         <terms:title xml:lang="en">Qanary</terms:title>
-        <terms:creator rdf:resource="http://wdaqua.informatik.uni-bonn.de"/>
+        <terms:creator rdf:resource="http://wdaqua.eu"/>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <owl:imports rdf:resource="http://www.openannotation.org/spec/core/20130208/oa.owl"/>
     </owl:Ontology>
